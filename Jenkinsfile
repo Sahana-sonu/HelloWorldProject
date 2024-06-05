@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Sahana-sonu/HelloWorldProject.git'
+                git branch: 'main', url: 'https://github.com/Sahana-sonu/HelloWorldProject.git', credentialsId: 'test_pipeline'
             }
         }
         stage('Compile') {
